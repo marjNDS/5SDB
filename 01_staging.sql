@@ -1,7 +1,7 @@
 -- ============================================================
 -- ETAPA 1: Tabela temporária de staging
 -- ============================================================
--- O prefixo # cria uma temp table de sessão no SQL Server.
+-- Cria uma temp table de sessão no SQL Server.
 -- Ela fica no tempdb, não polui o banco principal, e é
 -- destruída automaticamente quando a conexão é encerrada.
 --
@@ -9,7 +9,7 @@
 -- tratamento.
 -- ============================================================
 
-CREATE TABLE #staging (
+CREATE TEMPORARY TABLE staging (
     codigoPedido    VARCHAR(50),
     dataPedido      DATE,
     SKU             VARCHAR(50),
@@ -32,8 +32,9 @@ CREATE TABLE #staging (
 -- Em produção, substituir por BULK INSERT ou OPENROWSET
 -- para carregar o arquivo diretamente, sem INSERT manual.
 -- ============================================================
-INSERT INTO #staging VALUES
+INSERT INTO staging VALUES
 ('abc123','2024-03-19','brinq456rio','456','quebra-cabeca',1,43.22,5.32,'samir@gmail.com','123','Samir','Rua Exemplo 1','21212322','RJ','Brasil'),
 ('abc123','2024-03-19','brinq789rio','789','jogo',         1,43.22,5.32,'samir@gmail.com','123','Samir','Rua Exemplo 1','21212322','RJ','Brasil'),
 ('abc789','2024-03-20','roupa123rio','123','camisa',       2,47.25,6.21,'teste@gmail.com','789','Fulano','Rua Exemplo 2','14784520','RJ','Brasil'),
 ('abc741','2024-03-21','brinq789rio','789','jogo',         1,43.22,5.32,'samir@gmail.com','123','Samir','Rua Exemplo 1','21212322','RJ','Brasil');
+

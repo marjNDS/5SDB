@@ -11,9 +11,6 @@
 --   4. expedicao  (FK → pedidos)
 --   5. compra     (FK → clientes, produtos, pedidos)
 --
--- O bloco IF NOT EXISTS garante que o script pode ser
--- executado múltiplas vezes sem erro — se a tabela já
--- existir, o CREATE é simplesmente ignorado.
 -- ============================================================
 
 
@@ -22,8 +19,7 @@
 -- Armazena os dados do comprador.
 -- Chave primária: codigoComprador
 -- ------------------------------------------------------------
-IF NOT EXISTS (SELECT * FROM sysobjects WHERE name='clientes' AND xtype='U')
-CREATE TABLE clientes (
+CREATE TABLE IF NOT EXISTS clientes (
     codigoComprador VARCHAR(50)  NOT NULL PRIMARY KEY,
     nomeComprador   VARCHAR(100) NOT NULL,
     email           VARCHAR(100) NOT NULL
@@ -35,8 +31,7 @@ CREATE TABLE clientes (
 -- Armazena os dados do produto.
 -- Chave primária: SKU
 -- ------------------------------------------------------------
-IF NOT EXISTS (SELECT * FROM sysobjects WHERE name='produtos' AND xtype='U')
-CREATE TABLE produtos (
+CREATE TABLE IF NOT EXISTS produtos (
     SKU         VARCHAR(50)   NOT NULL PRIMARY KEY,
     UPC         VARCHAR(50),
     nomeProduto VARCHAR(100)  NOT NULL,
@@ -55,8 +50,7 @@ CREATE TABLE produtos (
 --   N produtos: (val1×qtd1) + (val2×qtd2) + ... + frete
 --   O frete é somado uma única vez por pedido.
 -- ------------------------------------------------------------
-IF NOT EXISTS (SELECT * FROM sysobjects WHERE name='pedidos' AND xtype='U')
-CREATE TABLE pedidos (
+CREATE TABLE IF NOT EXISTS pedidos (
     codigoPedido    VARCHAR(50)   NOT NULL PRIMARY KEY,
     dataPedido      DATE          NOT NULL,
     codigoComprador VARCHAR(50)   NOT NULL,
@@ -66,14 +60,14 @@ CREATE TABLE pedidos (
 );
 
 
+
 -- ------------------------------------------------------------
 -- 2.4 expedicao
 -- Armazena o endereço de entrega do pedido.
 -- Chave primária: codigoPedido (1 endereço por pedido)
 -- FK → pedidos (codigoPedido)
 -- ------------------------------------------------------------
-IF NOT EXISTS (SELECT * FROM sysobjects WHERE name='expedicao' AND xtype='U')
-CREATE TABLE expedicao (
+CREATE TABLE IF NOT EXISTS expedicao (
     codigoPedido VARCHAR(50)  NOT NULL PRIMARY KEY,
     endereco     VARCHAR(200) NOT NULL,
     CEP          VARCHAR(20)  NOT NULL,
@@ -91,8 +85,7 @@ CREATE TABLE expedicao (
 --     no mesmo pedido.
 -- FK → pedidos, produtos e clientes
 -- ------------------------------------------------------------
-IF NOT EXISTS (SELECT * FROM sysobjects WHERE name='compra' AND xtype='U')
-CREATE TABLE compra (
+CREATE TABLE IF NOT EXISTS compra (
     codigoPedido    VARCHAR(50) NOT NULL,
     SKU             VARCHAR(50) NOT NULL,
     codigoComprador VARCHAR(50) NOT NULL,
@@ -102,3 +95,4 @@ CREATE TABLE compra (
     FOREIGN KEY (SKU)             REFERENCES produtos(SKU),
     FOREIGN KEY (codigoComprador) REFERENCES clientes(codigoComprador)
 );
+
