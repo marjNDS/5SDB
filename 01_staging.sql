@@ -39,14 +39,11 @@ CREATE TEMPORARY TABLE raw_staging (
 -- ------------------------------------------------------------
 -- Passo 2: carregar o arquivo CSV no raw_staging
 --
--- Ajuste o caminho '/caminho/para/pedidos.txt' para o local
--- real do arquivo no seu servidor PostgreSQL.
---
 -- DELIMITER ';' → separador de colunas do arquivo
 -- CSV HEADER    → ignora a primeira linha (cabeçalho)
 -- ------------------------------------------------------------
 COPY raw_staging
-FROM '/caminho/para/pedidos.txt'
+FROM 'C:\Users\marJ\Documents\GitHub\5SDB'
 DELIMITER ';'
 CSV HEADER;
 
