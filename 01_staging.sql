@@ -43,7 +43,7 @@ CREATE TEMPORARY TABLE raw_staging (
 -- CSV HEADER    → ignora a primeira linha (cabeçalho)
 -- ------------------------------------------------------------
 COPY raw_staging
-FROM 'C:\Users\marJ\Documents\GitHub\5SDB'
+FROM 'C:\5sbd\pedidos.txt'
 DELIMITER ';'
 CSV HEADER;
 
