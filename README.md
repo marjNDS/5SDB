@@ -1,15 +1,15 @@
-# Order Processing — Scripts SQL
+# Order Processing — Scripts SQL (PostgreSQL)
 
 Scripts para carga diária de pedidos via CSV no sistema de processamento.
 
 ## Estrutura
 
 ```
-order-processing/
-├── 01_staging.sql       # Cria a tabela temporária e carrega o CSV
+order-processing-pg/
+├── 01_staging.sql   # Cria a tabela temporária e carrega o CSV
 ├── 02_create_tables.sql # Cria as tabelas do sistema (se não existirem)
-├── 03_merge.sql         # UPSERT: insere novos registros ou atualiza existentes
-├── 04_cleanup.sql       # Remove a tabela temporária
+├── 03_upsert.sql    # UPSERT: insere novos registros ou atualiza existentes
+├── 04_cleanup.sql   # Remove a tabela temporária
 └── README.md
 ```
 
@@ -21,7 +21,8 @@ Execute os scripts **na ordem numérica**:
 01 → 02 → 03 → 04
 ```
 
-> ⚠️ Os scripts 01, 03 e 04 dependem da tabela `#staging` e devem rodar na **mesma sessão** do SQL Server.
+> ⚠️ Os scripts 01, 03 e 04 dependem da tabela `staging` e devem rodar na **mesma sessão** do PostgreSQL.
+
 
 ## Tabelas do sistema
 
@@ -52,6 +53,6 @@ O frete é somado **uma única vez** por pedido.
 
 ## Observações
 
-- Em produção, substituir o `INSERT INTO #staging VALUES (...)` do script 01 por `BULK INSERT` ou `OPENROWSET` para carregar o arquivo CSV diretamente.
+- Em produção, substituir o `INSERT INTO staging VALUES (...)` do script 01 por `COPY` para carregar o arquivo CSV diretamente.
 - O script 02 é idempotente: pode ser executado múltiplas vezes sem erro.
-- O MERGE (script 03) atualiza registros existentes e insere novos automaticamente.
+- O UPSERT (script 03) atualiza registros existentes e insere novos automaticamente. O `EXCLUDED` referencia os valores que tentaram ser inseridos e geraram conflito.
