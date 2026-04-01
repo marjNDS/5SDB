@@ -1,14 +1,59 @@
 -- ============================================================
 -- ETAPA 1: Tabela temporária de staging
 -- ============================================================
--- Cria uma temp table de sessão no SQL Server.
--- Ela fica no tempdb, não polui o banco principal, e é
--- destruída automaticamente quando a conexão é encerrada.
+-- Estratégia em duas etapas:
 --
--- Objetivo: receber os dados brutos do CSV antes de qualquer
--- tratamento.
+--   1. raw_staging: recebe tudo como texto via COPY.
+--      Necessário porque o arquivo usa vírgula como separador
+--      decimal (ex: 43,22), e o PostgreSQL espera ponto (43.22).
+--      Se tentássemos carregar direto em colunas DECIMAL, o COPY
+--      falharia com erro de conversão.
+--
+--   2. staging: recebe os dados do raw_staging já com os tipos
+--      corretos, após substituir vírgula por ponto nos campos
+--      numéricos com REPLACE(..., ',', '.').
 -- ============================================================
 
+
+-- ------------------------------------------------------------
+-- Passo 1: tabela intermediária com tudo como texto
+-- ------------------------------------------------------------
+CREATE TEMPORARY TABLE raw_staging (
+    codigoPedido    TEXT,
+    dataPedido      TEXT,
+    SKU             TEXT,
+    UPC             TEXT,
+    nomeProduto     TEXT,
+    qtd             TEXT,
+    valor           TEXT,
+    frete           TEXT,
+    email           TEXT,
+    codigoComprador TEXT,
+    nomeComprador   TEXT,
+    endereco        TEXT,
+    CEP             TEXT,
+    UF              TEXT,
+    pais            TEXT
+);
+
+-- ------------------------------------------------------------
+-- Passo 2: carregar o arquivo CSV no raw_staging
+--
+-- Ajuste o caminho '/caminho/para/pedidos.txt' para o local
+-- real do arquivo no seu servidor PostgreSQL.
+--
+-- DELIMITER ';' → separador de colunas do arquivo
+-- CSV HEADER    → ignora a primeira linha (cabeçalho)
+-- ------------------------------------------------------------
+COPY raw_staging
+FROM '/caminho/para/pedidos.txt'
+DELIMITER ';'
+CSV HEADER;
+
+
+-- ------------------------------------------------------------
+-- Passo 3: tabela staging com os tipos corretos
+-- ------------------------------------------------------------
 CREATE TEMPORARY TABLE staging (
     codigoPedido    VARCHAR(50),
     dataPedido      DATE,
@@ -27,14 +72,33 @@ CREATE TEMPORARY TABLE staging (
     pais            VARCHAR(50)
 );
 
--- ============================================================
--- Inserção dos dados do CSV
--- Em produção, substituir por BULK INSERT ou OPENROWSET
--- para carregar o arquivo diretamente, sem INSERT manual.
--- ============================================================
-INSERT INTO staging VALUES
-('abc123','2024-03-19','brinq456rio','456','quebra-cabeca',1,43.22,5.32,'samir@gmail.com','123','Samir','Rua Exemplo 1','21212322','RJ','Brasil'),
-('abc123','2024-03-19','brinq789rio','789','jogo',         1,43.22,5.32,'samir@gmail.com','123','Samir','Rua Exemplo 1','21212322','RJ','Brasil'),
-('abc789','2024-03-20','roupa123rio','123','camisa',       2,47.25,6.21,'teste@gmail.com','789','Fulano','Rua Exemplo 2','14784520','RJ','Brasil'),
-('abc741','2024-03-21','brinq789rio','789','jogo',         1,43.22,5.32,'samir@gmail.com','123','Samir','Rua Exemplo 1','21212322','RJ','Brasil');
+-- ------------------------------------------------------------
+-- Passo 4: mover os dados do raw_staging para a staging,
+-- convertendo os tipos no processo.
+--
+-- REPLACE(valor, ',', '.') → troca vírgula por ponto antes
+-- de converter para DECIMAL (ex: '43,22' → '43.22' → 43.22)
+-- ------------------------------------------------------------
+INSERT INTO staging
+SELECT
+    codigoPedido,
+    dataPedido::DATE,
+    SKU,
+    UPC,
+    nomeProduto,
+    qtd::INT,
+    REPLACE(valor, ',', '.')::DECIMAL(10,2),
+    REPLACE(frete, ',', '.')::DECIMAL(10,2),
+    email,
+    codigoComprador,
+    nomeComprador,
+    endereco,
+    CEP,
+    UF,
+    pais
+FROM raw_staging;
 
+-- ------------------------------------------------------------
+-- Passo 5: descartar o raw_staging — já não é mais necessário
+-- ------------------------------------------------------------
+DROP TABLE raw_staging;
