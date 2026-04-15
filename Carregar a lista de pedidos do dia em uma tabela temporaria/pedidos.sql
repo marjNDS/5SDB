@@ -26,11 +26,13 @@ CREATE TABLE IF NOT EXISTS clientes (
 
 -- Produtos: um registro por SKU (chave interna da empresa)
 CREATE TABLE IF NOT EXISTS produtos (
-    sku           VARCHAR(100) PRIMARY KEY,
-    upc           VARCHAR(50),
-    nome_produto  VARCHAR(255) NOT NULL,
-    valor         NUMERIC(10, 2) NOT NULL
+    sku               VARCHAR(100) PRIMARY KEY,
+    upc               VARCHAR(50),
+    nome_produto      VARCHAR(255) NOT NULL,
+    valor             NUMERIC(10, 2) NOT NULL,
+    estoque_atual     INT DEFAULT 0
 );
+
 
 -- Compra: representa a transação financeira consolidada de um pedido inteiro.
 -- Um pedido pode ter N itens; a compra registra o total + frete.
@@ -139,13 +141,12 @@ SET
 
 
 -- =============================================================================
--- BLOCO 5: SEPARAR PRODUTOS SEM ESTOQUE
--- Antes de processar qualquer tabela do sistema, identificamos os itens cujo
--- SKU não existe em 'produtos'. Esses itens vão para 'produtos_em_falta' e
--- são EXCLUÍDOS da staging para não contaminar o restante do processamento.
+-- BLOCO 5: SEPARAR PRODUTOS SEM ESTOQUE OU COM QUANTIDADE INSUFICIENTE
+-- Identificamos os itens cujo SKU não existe em 'produtos' ou cuja
+-- quantidade pedida supera o estoque atual. 
 -- =============================================================================
 
--- Insere na tabela de falta os itens cujo SKU não existe em produtos
+-- Insere na tabela de falta os itens sem cadastro OU sem saldo suficiente
 INSERT INTO produtos_em_falta (
     codigo_pedido, sku, upc, nome_produto, quantidade, data_registro
 )
@@ -157,13 +158,15 @@ SELECT
     s.qtd,
     NOW()
 FROM staging_pedidos s
--- LEFT JOIN com produtos: onde p.sku é NULL, o SKU não existe no estoque
 LEFT JOIN produtos p ON p.sku = s.sku
-WHERE p.sku IS NULL;
+-- Condição atualizada: O SKU não existe (NULL) OU a demanda é maior que o estoque
+WHERE p.sku IS NULL OR s.qtd > p.estoque_atual;
 
--- Remove da staging os itens sem estoque para que não sejam processados
+-- Remove da staging os itens problemáticos para que não sejam processados
 DELETE FROM staging_pedidos
-WHERE sku NOT IN (SELECT sku FROM produtos);
+WHERE sku NOT IN (SELECT sku FROM produtos)
+   OR qtd > (SELECT estoque_atual FROM produtos WHERE sku = staging_pedidos.sku);
+
 
 
 -- =============================================================================
