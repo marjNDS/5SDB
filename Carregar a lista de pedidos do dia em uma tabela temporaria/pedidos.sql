@@ -115,7 +115,7 @@ COPY staging_pedidos (
     qtd, valor, frete, email, codigo_comprador,
     nome_comprador, endereco, cep, uf, pais
 )
-FROM '/caminho/para/pedidos.txt'   -- << ALTERE para o caminho real do arquivo
+FROM 'C:\5sbd\pedidos.txt'
 DELIMITER ';'
 CSV HEADER;
 
