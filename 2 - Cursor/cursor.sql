@@ -43,10 +43,6 @@ BEGIN
             UPDATE compra
             SET status = 'Atendido'
             WHERE codigo_pedido = v_pedido.codigo_pedido;
-
-            -- Nota: O PostgreSQL não permite COMMIT dentro de um loop FOR 
-            -- em blocos DO anônimos simples. Toda a operação deste bloco 
-            -- rodará em uma única transação.
             
         END IF;
         
