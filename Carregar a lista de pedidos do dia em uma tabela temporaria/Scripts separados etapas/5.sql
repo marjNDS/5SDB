@@ -1,11 +1,10 @@
 -- =============================================================================
--- BLOCO 5: SEPARAR PRODUTOS SEM ESTOQUE
--- Antes de processar qualquer tabela do sistema, identificamos os itens cujo
--- SKU não existe em 'produtos'. Esses itens vão para 'produtos_em_falta' e
--- são EXCLUÍDOS da staging para não contaminar o restante do processamento.
+-- BLOCO 5: SEPARAR PRODUTOS SEM ESTOQUE OU COM QUANTIDADE INSUFICIENTE
+-- Identificamos os itens cujo SKU não existe em 'produtos' ou cuja
+-- quantidade pedida supera o estoque atual. 
 -- =============================================================================
 
--- Insere na tabela de falta os itens cujo SKU não existe em produtos
+-- Insere na tabela de falta os itens sem cadastro OU sem saldo suficiente
 INSERT INTO produtos_em_falta (
     codigo_pedido, sku, upc, nome_produto, quantidade, data_registro
 )
@@ -17,13 +16,15 @@ SELECT
     s.qtd,
     NOW()
 FROM staging_pedidos s
--- LEFT JOIN com produtos: onde p.sku é NULL, o SKU não existe no estoque
 LEFT JOIN produtos p ON p.sku = s.sku
-WHERE p.sku IS NULL;
+-- Condição atualizada: O SKU não existe (NULL) OU a demanda é maior que o estoque
+WHERE p.sku IS NULL OR s.qtd > p.estoque_atual;
 
--- Remove da staging os itens sem estoque para que não sejam processados
+-- Remove da staging os itens problemáticos para que não sejam processados
 DELETE FROM staging_pedidos
-WHERE sku NOT IN (SELECT sku FROM produtos);
+WHERE sku NOT IN (SELECT sku FROM produtos)
+   OR qtd > (SELECT estoque_atual FROM produtos WHERE sku = staging_pedidos.sku);
+
 
 
 -- =============================================================================

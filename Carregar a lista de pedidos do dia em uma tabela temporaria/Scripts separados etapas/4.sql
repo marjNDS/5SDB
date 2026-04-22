@@ -14,4 +14,3 @@ UPDATE staging_pedidos
 SET
     valor_num = REPLACE(valor, ',', '.')::NUMERIC(10,2),
     frete_num = REPLACE(frete, ',', '.')::NUMERIC(10,2);
-

@@ -17,11 +17,13 @@ CREATE TABLE IF NOT EXISTS clientes (
 
 -- Produtos: um registro por SKU (chave interna da empresa)
 CREATE TABLE IF NOT EXISTS produtos (
-    sku           VARCHAR(100) PRIMARY KEY,
-    upc           VARCHAR(50),
-    nome_produto  VARCHAR(255) NOT NULL,
-    valor         NUMERIC(10, 2) NOT NULL
+    sku               VARCHAR(100) PRIMARY KEY,
+    upc               VARCHAR(50),
+    nome_produto      VARCHAR(255) NOT NULL,
+    valor             NUMERIC(10, 2) NOT NULL,
+    estoque_atual     INT DEFAULT 0
 );
+
 
 -- Compra: representa a transação financeira consolidada de um pedido inteiro.
 -- Um pedido pode ter N itens; a compra registra o total + frete.
