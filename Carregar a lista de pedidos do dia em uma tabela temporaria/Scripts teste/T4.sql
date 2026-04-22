@@ -1,12 +1,11 @@
 -- =============================================================================
 -- BLOCO T4: VERIFICAÇÕES
--- Cada verificação tem um resultado esperado documentado.
 -- Compare a saída real com o esperado para validar cada exigência.
 -- =============================================================================
 
 -- ----------------------------------------------------------------------------
--- VERIFICAÇÃO 1 — Exigência [1]: dados chegaram nas tabelas corretas?
--- Esperado: 2 clientes, 3 produtos, 3 compras, 4 itens de pedido, 3 expedições
+-- VERIFICAÇÃO 1 — Dados chegaram nas tabelas corretas?
+-- Esperado: 2 clientes, 4 produtos, 3 compras, 4 itens de pedido, 3 expedições
 -- ----------------------------------------------------------------------------
 SELECT 'clientes'        AS tabela, COUNT(*) AS total FROM clientes
 UNION ALL
@@ -18,14 +17,8 @@ SELECT 'pedidos (itens)',           COUNT(*)           FROM pedidos
 UNION ALL
 SELECT 'expedicao',                 COUNT(*)           FROM expedicao;
 
-
 -- ----------------------------------------------------------------------------
--- VERIFICAÇÃO 2 — Exigência [2]: cálculo do valor total dos pedidos
---
--- Esperado:
---   abc123 → (43,22 * 1) + (43,22 * 1) + 5,32  = 91,76  (N produtos)
---   abc789 → (47,25 * 2)               + 6,21   = 100,71 (1 produto, qtd=2)
---   abc741 → (43,22 * 1)               + 5,32   = 48,54  (1 produto)
+-- VERIFICAÇÃO 2 — Cálculo do valor total dos pedidos processados com sucesso
 -- ----------------------------------------------------------------------------
 SELECT
     codigo_pedido,
@@ -41,34 +34,31 @@ FROM compra
 WHERE codigo_pedido IN ('abc123', 'abc789', 'abc741')
 ORDER BY codigo_pedido;
 
-
 -- ----------------------------------------------------------------------------
--- VERIFICAÇÃO 3 — Exigência [3]: produto sem estoque foi isolado?
---
--- Esperado: 1 registro com sku = 'eletro999rio' e codigo_pedido = 'abc999'
---           O pedido abc999 NÃO deve aparecer em compra nem em pedidos.
+-- VERIFICAÇÃO 3 — Itens sem estoque ou saldo insuficiente foram isolados?
+-- Esperado: 2 registros (abc999 e abc888) na tabela produtos_em_falta.
+--           Ambos NÃO devem aparecer nas tabelas de sistema (compra e pedidos).
 -- ----------------------------------------------------------------------------
 SELECT 'produtos_em_falta' AS verificacao, codigo_pedido, sku, nome_produto, quantidade
 FROM produtos_em_falta
-WHERE sku = 'eletro999rio';
+WHERE codigo_pedido IN ('abc999', 'abc888')
+ORDER BY codigo_pedido;
 
--- Confirma que abc999 não vazou para as tabelas do sistema
+-- Confirma que os itens barrados não vazaram
 SELECT
-    CASE WHEN COUNT(*) = 0 THEN 'OK — abc999 ausente em compra'
-         ELSE 'FALHOU — abc999 presente em compra'
-    END AS resultado
-FROM compra WHERE codigo_pedido = 'abc999';
+    CASE WHEN COUNT(*) = 0 THEN 'OK — abc888 e abc999 ausentes em compra'
+         ELSE 'FALHOU — vazamento para a tabela compra'
+    END AS resultado_compra
+FROM compra WHERE codigo_pedido IN ('abc999', 'abc888');
 
 SELECT
-    CASE WHEN COUNT(*) = 0 THEN 'OK — abc999 ausente em pedidos'
-         ELSE 'FALHOU — abc999 presente em pedidos'
-    END AS resultado
-FROM pedidos WHERE codigo_pedido = 'abc999';
-
+    CASE WHEN COUNT(*) = 0 THEN 'OK — abc888 e abc999 ausentes em pedidos'
+         ELSE 'FALHOU — vazamento para a tabela pedidos'
+    END AS resultado_pedidos
+FROM pedidos WHERE codigo_pedido IN ('abc999', 'abc888');
 
 -- ----------------------------------------------------------------------------
--- VERIFICAÇÃO 4 — Exigência [4]: pedidos ordenados do mais caro ao mais barato
---
+-- VERIFICAÇÃO 4 — Pedidos ordenados do mais caro ao mais barato
 -- Esperado (ordem): abc789 (100,71) → abc123 (91,76) → abc741 (48,54)
 -- ----------------------------------------------------------------------------
 SELECT

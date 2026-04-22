@@ -1,8 +1,8 @@
 -- =============================================================================
--- BLOCO T3: EXECUTAR O PROCESSAMENTO (replica os blocos 5–9 do script principal)
+-- BLOCO T3: EXECUTAR O PROCESSAMENTO (replica os blocos do script principal)
 -- =============================================================================
 
--- [Exigência 3] Produtos sem estoque → produtos_em_falta
+-- Produtos sem cadastro OU sem saldo suficiente -> produtos_em_falta
 INSERT INTO produtos_em_falta (
     codigo_pedido, sku, upc, nome_produto, quantidade, data_registro
 )
@@ -10,11 +10,12 @@ SELECT
     s.codigo_pedido, s.sku, s.upc, s.nome_produto, s.qtd, NOW()
 FROM staging_pedidos s
 LEFT JOIN produtos p ON p.sku = s.sku
-WHERE p.sku IS NULL;
+WHERE p.sku IS NULL OR s.qtd > p.estoque_atual;
 
--- Remove da staging os itens sem estoque
+-- Remove da staging os itens sem cadastro ou saldo insuficiente
 DELETE FROM staging_pedidos
-WHERE sku NOT IN (SELECT sku FROM produtos);
+WHERE sku NOT IN (SELECT sku FROM produtos)
+   OR qtd > (SELECT estoque_atual FROM produtos WHERE sku = staging_pedidos.sku);
 
 -- Clientes
 INSERT INTO clientes (codigo_comprador, nome, email, endereco, cep, uf, pais)

@@ -1,13 +1,13 @@
 -- =============================================================================
 -- BLOCO T2: CRIAR E POPULAR A STAGING COM OS DADOS DE TESTE
--- Replica os dados do pedidos.txt e adiciona uma linha extra com um SKU
--- inexistente ('eletro999rio') para acionar a exigência [3].
+-- Replica os dados do pedidos.txt e adiciona linhas extras para testar as falhas.
 --
 -- Cenários cobertos:
---   abc123 → 2 itens (quebra-cabeça + jogo)         → pedido com N produtos [2]
---   abc789 → 1 item  (camisa, qtd=2)                → pedido com 1 produto  [2]
---   abc741 → 1 item  (jogo)                         → pedido com 1 produto  [2]
---   abc999 → 1 item  (eletro999rio sem estoque)     → deve ir p/ falta      [3]
+--   abc123 → 2 itens (quebra-cabeça + jogo)         → pedido com N produtos
+--   abc789 → 1 item  (camisa, qtd=2)                → pedido com 1 produto
+--   abc741 → 1 item  (jogo)                         → pedido com 1 produto
+--   abc888 → 1 item  (estoque insuficiente)         → deve ir p/ falta
+--   abc999 → 1 item  (eletro999rio sem estoque)     → deve ir p/ falta
 -- =============================================================================
 
 DROP TABLE IF EXISTS staging_pedidos;
@@ -32,7 +32,7 @@ CREATE TEMP TABLE staging_pedidos (
     frete_num        NUMERIC(10,2)
 );
 
--- Dados espelhados do pedidos.txt
+-- Dados espelhados
 INSERT INTO staging_pedidos (
     codigo_pedido, data_pedido, sku, upc, nome_produto,
     qtd, valor, frete, email, codigo_comprador,
@@ -48,7 +48,10 @@ INSERT INTO staging_pedidos (
     -- Pedido abc741: 1 item → valor total = (43,22*1) + 5,32 = 48,54
     ('abc741','2024-03-21','brinq789rio','789','jogo',          1,'43,22','5,32','samir@gmail.com','123','Samir','Rua Exemplo 1','21212322','RJ','Brasil'),
 
-    -- Pedido abc999: SKU inexistente no estoque → deve ir para produtos_em_falta [3]
+    -- Pedido abc888: SKU com estoque insuficiente (tenta comprar 5, só tem 2) → deve ir p/ produtos_em_falta
+    ('abc888','2024-03-21','limite001rio','001','produto-limite',5,'10,00','5,00','teste@gmail.com','789','Fulano','Rua Exemplo 2','14784520','RJ','Brasil'),
+
+    -- Pedido abc999: SKU inexistente no estoque → deve ir para produtos_em_falta
     ('abc999','2024-03-21','eletro999rio','999','televisao',    1,'1200,00','30,00','samir@gmail.com','123','Samir','Rua Exemplo 1','21212322','RJ','Brasil');
 
 -- Converte valores monetários de texto (vírgula) para NUMERIC (ponto)
