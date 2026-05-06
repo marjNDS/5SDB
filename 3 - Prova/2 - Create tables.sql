@@ -2,7 +2,7 @@
 -- FASE 2: CRIAÇÃO DAS TABELAS DEFINITIVAS
 -- =============================================================================
 
--- 1. Clientes (A chave primária será o CPF)
+-- 1. Clientes
 CREATE TABLE IF NOT EXISTS clientes (
     cpf                  VARCHAR(20) PRIMARY KEY,
     nome                 VARCHAR(255) NOT NULL,
@@ -15,7 +15,7 @@ CREATE TABLE IF NOT EXISTS clientes (
     pais                 VARCHAR(50)
 );
 
--- 2. Produtos (A chave primária será o SKU)
+-- 2. Produtos
 CREATE TABLE IF NOT EXISTS produtos (
     sku                  VARCHAR(100) PRIMARY KEY,
     upc                  VARCHAR(50),
@@ -24,7 +24,7 @@ CREATE TABLE IF NOT EXISTS produtos (
     lote_reposicao       INT DEFAULT 10
 );
 
--- 3. Pedidos (Capa do pedido)
+-- 3. Pedidos
 CREATE TABLE IF NOT EXISTS pedidos (
     order_id             VARCHAR(50) PRIMARY KEY,
     cpf_cliente          VARCHAR(20) REFERENCES clientes(cpf),

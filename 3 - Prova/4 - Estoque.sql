@@ -63,7 +63,7 @@ BEGIN
         v_atende_tudo := TRUE;
 
         -- =====================================================================
-        -- PASSO A: Validação do "Tudo ou Nada"
+        -- PASSO A: Validação do estoque: se não houver itens suficientes, não é atendido
         -- =====================================================================
         OPEN cur_itens(v_pedido.order_id);
         LOOP

@@ -1,0 +1,4 @@
+order-id,order-item-id,purchase-date,payments-date,buyer-email,buyer-name,cpf,buyer-phone-number,sku,upc,product-name,quantity-purchased,currency,item-price,ship-service-level,ship-address-1,ship-address-2,ship-address-3,ship-city,ship-state,ship-postal-code,ship-country
+1001,ITM-01,2024-05-10 10:00:00,2024-05-10 10:05:00,joao@email.com,Joao Silva,11122233344,21999999999,SKU-TECLADO,12345,Teclado Mecanico,2,BRL,150.00,EXPRESS,Rua A,Apto 12,,Rio de Janeiro,RJ,20000-000,Brasil
+1001,ITM-02,2024-05-10 10:00:00,2024-05-10 10:05:00,joao@email.com,Joao Silva,11122233344,21999999999,SKU-MOUSE,67890,Mouse Gamer,2,BRL,80.00,EXPRESS,Rua A,Apto 12,,Rio de Janeiro,RJ,20000-000,Brasil
+1002,ITM-03,2024-05-11 14:30:00,2024-05-11 14:35:00,maria@email.com,Maria Souza,55566677788,11988888888,SKU-MONITOR,54321,Monitor 24,5,BRL,800.00,STANDARD,Av Principal,Casa 5,Bloco B,Sao Paulo,SP,01000-000,Brasil

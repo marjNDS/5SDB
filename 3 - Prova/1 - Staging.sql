@@ -1,5 +1,5 @@
 -- =============================================================================
--- FASE 1: CRIAÇÃO DA TABELA DE CARGA (STAGING)
+-- FASE 1: CRIAÇÃO DA TABELA DE CARGA (STAGING) E IMPORTAÇÃO DO CSV
 -- =============================================================================
 
 DROP TABLE IF EXISTS staging_pedidos;
@@ -29,7 +29,11 @@ CREATE TEMP TABLE staging_pedidos (
     ship_country         VARCHAR(50)
 );
 
--- Comando de carga (simulação). No ambiente real, o caminho do arquivo deve ser ajustado.
-/*
-COPY staging_pedidos FROM '/caminho/do/arquivo/pedidos_marketplace.csv' DELIMITER ',' CSV HEADER;
-*/
+-- =============================================================================
+-- CARGA DO ARQUIVO CSV
+-- (O parâmetro CSV HEADER diz ao banco para ignorar a primeira linha)
+-- =============================================================================
+
+COPY staging_pedidos 
+FROM 'C:\PostgreSQL\CSV\pedidos_marketplace.csv' 
+WITH (FORMAT csv, HEADER true, DELIMITER ',');

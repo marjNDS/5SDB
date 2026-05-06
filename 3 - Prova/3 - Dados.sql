@@ -1,9 +1,9 @@
 -- =============================================================================
--- FASE 3: DISTRIBUIÇÃO DOS DADOS (RESPEITANDO CHAVES ESTRANGEIRAS)
+-- FASE 3: DISTRIBUIÇÃO DOS DADOS
 -- =============================================================================
 
 -- 1. Inserir Clientes Novos
--- Agrupamos pelo CPF para garantir que cada cliente só tente ser inserido uma vez.
+-- Agrupa pelo CPF para garantir que cada cliente só tente ser inserido uma vez.
 INSERT INTO clientes (cpf, nome, email, telefone, endereco, cidade, estado, cep, pais)
 SELECT DISTINCT ON (cpf)
     cpf,
@@ -21,7 +21,7 @@ ON CONFLICT (cpf) DO NOTHING;
 
 
 -- 2. Inserir Produtos Novos
--- Agrupamos pelo SKU. Novos produtos entram com estoque zero.
+-- Agrupa pelo SKU
 INSERT INTO produtos (sku, upc, nome_produto)
 SELECT DISTINCT ON (sku)
     sku,
@@ -33,7 +33,7 @@ ON CONFLICT (sku) DO NOTHING;
 
 
 -- 3. Inserir Pedidos
--- Agrupamos pelo order_id. Fazemos o cast das datas.
+-- Agrupa pelo order_id. Faz o cast das datas.
 INSERT INTO pedidos (order_id, cpf_cliente, data_compra, data_pagamento, nivel_servico_frete)
 SELECT DISTINCT ON (order_id)
     order_id,
