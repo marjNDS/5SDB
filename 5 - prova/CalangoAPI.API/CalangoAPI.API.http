@@ -1,0 +1,6 @@
+@CalangoAPI.API_HostAddress = http://localhost:5210
+
+GET {{CalangoAPI.API_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

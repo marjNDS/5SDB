@@ -1,0 +1,12 @@
+C:\Users\marJ\Documents\GitHub\5SDB\5 - prova\CalangoAPI.Domain\bin\Debug\net10.0\CalangoAPI.Domain.deps.json
+C:\Users\marJ\Documents\GitHub\5SDB\5 - prova\CalangoAPI.Domain\bin\Debug\net10.0\CalangoAPI.Domain.dll
+C:\Users\marJ\Documents\GitHub\5SDB\5 - prova\CalangoAPI.Domain\bin\Debug\net10.0\CalangoAPI.Domain.pdb
+C:\Users\marJ\Documents\GitHub\5SDB\5 - prova\CalangoAPI.Domain\obj\Debug\net10.0\CalangoAPI.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\marJ\Documents\GitHub\5SDB\5 - prova\CalangoAPI.Domain\obj\Debug\net10.0\CalangoAPI.Domain.AssemblyInfoInputs.cache
+C:\Users\marJ\Documents\GitHub\5SDB\5 - prova\CalangoAPI.Domain\obj\Debug\net10.0\CalangoAPI.Domain.AssemblyInfo.cs
+C:\Users\marJ\Documents\GitHub\5SDB\5 - prova\CalangoAPI.Domain\obj\Debug\net10.0\CalangoAPI.Domain.csproj.CoreCompileInputs.cache
+C:\Users\marJ\Documents\GitHub\5SDB\5 - prova\CalangoAPI.Domain\obj\Debug\net10.0\CalangoAPI.Domain.sourcelink.json
+C:\Users\marJ\Documents\GitHub\5SDB\5 - prova\CalangoAPI.Domain\obj\Debug\net10.0\CalangoAPI.Domain.dll
+C:\Users\marJ\Documents\GitHub\5SDB\5 - prova\CalangoAPI.Domain\obj\Debug\net10.0\refint\CalangoAPI.Domain.dll
+C:\Users\marJ\Documents\GitHub\5SDB\5 - prova\CalangoAPI.Domain\obj\Debug\net10.0\CalangoAPI.Domain.pdb
+C:\Users\marJ\Documents\GitHub\5SDB\5 - prova\CalangoAPI.Domain\obj\Debug\net10.0\ref\CalangoAPI.Domain.dll

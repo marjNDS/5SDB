@@ -1,0 +1,39 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v10.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v10.0": {
+      "CalangoAPI.Application/1.0.0": {
+        "dependencies": {
+          "CalangoAPI.Domain": "1.0.0"
+        },
+        "runtime": {
+          "CalangoAPI.Application.dll": {}
+        }
+      },
+      "CalangoAPI.Domain/1.0.0": {
+        "runtime": {
+          "CalangoAPI.Domain.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      }
+    }
+  },
+  "libraries": {
+    "CalangoAPI.Application/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "CalangoAPI.Domain/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

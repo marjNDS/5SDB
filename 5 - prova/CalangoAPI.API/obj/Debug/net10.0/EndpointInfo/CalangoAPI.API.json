@@ -1,0 +1,433 @@
+{
+  "openapi": "3.0.4",
+  "info": {
+    "title": "CalangoAPI.API",
+    "version": "1.0"
+  },
+  "paths": {
+    "/api/v1/Motoristas": {
+      "post": {
+        "tags": [
+          "Motoristas"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CadastrarMotoristaRequest"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CadastrarMotoristaRequest"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/CadastrarMotoristaRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/v1/Motoristas/escalas": {
+      "post": {
+        "tags": [
+          "Motoristas"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AlocarMotoristaRequest"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AlocarMotoristaRequest"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/AlocarMotoristaRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/v1/Onibus": {
+      "post": {
+        "tags": [
+          "Onibus"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CadastrarOnibusRequest"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CadastrarOnibusRequest"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/CadastrarOnibusRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "get": {
+        "tags": [
+          "Onibus"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/v1/Passagens/calcular-preco": {
+      "post": {
+        "tags": [
+          "Passagens"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CalcularPrecoRequest"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CalcularPrecoRequest"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/CalcularPrecoRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/v1/Passagens/comprar": {
+      "post": {
+        "tags": [
+          "Passagens"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ComprarPassagemRequest"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ComprarPassagemRequest"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/ComprarPassagemRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/v1/Rotas": {
+      "post": {
+        "tags": [
+          "Rotas"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CadastrarRotaRequest"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CadastrarRotaRequest"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/CadastrarRotaRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "get": {
+        "tags": [
+          "Rotas"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/v1/Viagens": {
+      "post": {
+        "tags": [
+          "Viagens"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CadastrarViagemRequest"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CadastrarViagemRequest"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/CadastrarViagemRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "get": {
+        "tags": [
+          "Viagens"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "AlocarMotoristaRequest": {
+        "type": "object",
+        "properties": {
+          "motoristaId": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "viagemId": {
+            "type": "string",
+            "format": "uuid"
+          }
+        },
+        "additionalProperties": false
+      },
+      "CadastrarMotoristaRequest": {
+        "type": "object",
+        "properties": {
+          "nome": {
+            "type": "string",
+            "nullable": true
+          },
+          "cartaConducao": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "CadastrarOnibusRequest": {
+        "type": "object",
+        "properties": {
+          "placa": {
+            "type": "string",
+            "nullable": true
+          },
+          "capacidade": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "tipo": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "CadastrarRotaRequest": {
+        "type": "object",
+        "properties": {
+          "nome": {
+            "type": "string",
+            "nullable": true
+          },
+          "pontosDeVendaIds": {
+            "type": "array",
+            "items": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "nullable": true
+          },
+          "paradas": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ParadaRequest"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "CadastrarViagemRequest": {
+        "type": "object",
+        "properties": {
+          "rotaId": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "onibusId": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "dataPartida": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "motoristaId": {
+            "type": "string",
+            "format": "uuid",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "CalcularPrecoRequest": {
+        "type": "object",
+        "properties": {
+          "viagemId": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "paradaOrigemId": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "paradaDestinoId": {
+            "type": "string",
+            "format": "uuid"
+          }
+        },
+        "additionalProperties": false
+      },
+      "ComprarPassagemRequest": {
+        "type": "object",
+        "properties": {
+          "viagemId": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "paradaOrigemId": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "paradaDestinoId": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "passageiroId": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "assento": {
+            "type": "integer",
+            "format": "int32"
+          }
+        },
+        "additionalProperties": false
+      },
+      "ParadaRequest": {
+        "type": "object",
+        "properties": {
+          "nomeLocalidade": {
+            "type": "string",
+            "nullable": true
+          },
+          "ordem": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "distanciaInicialKm": {
+            "type": "number",
+            "format": "double"
+          }
+        },
+        "additionalProperties": false
+      }
+    }
+  },
+  "tags": [
+    {
+      "name": "Motoristas"
+    },
+    {
+      "name": "Onibus"
+    },
+    {
+      "name": "Passagens"
+    },
+    {
+      "name": "Rotas"
+    },
+    {
+      "name": "Viagens"
+    }
+  ]
+}

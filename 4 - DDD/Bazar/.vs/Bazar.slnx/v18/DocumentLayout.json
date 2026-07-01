@@ -1,0 +1,92 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\marJ\\Documents\\GitHub\\5SDB\\4 - DDD\\Bazar\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{7333A612-083A-C264-B6D8-8CAC6EDC9288}|Bazar.Worker\\Bazar.Worker.csproj|c:\\users\\marj\\documents\\github\\5sdb\\4 - ddd\\bazar\\bazar.worker\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7333A612-083A-C264-B6D8-8CAC6EDC9288}|Bazar.Worker\\Bazar.Worker.csproj|solutionrelative:bazar.worker\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7333A612-083A-C264-B6D8-8CAC6EDC9288}|Bazar.Worker\\Bazar.Api.csproj|c:\\users\\marj\\documents\\github\\5sdb\\4 - ddd\\bazar\\bazar.worker\\integracaocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7333A612-083A-C264-B6D8-8CAC6EDC9288}|Bazar.Worker\\Bazar.Api.csproj|solutionrelative:bazar.worker\\integracaocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9001B21B-F1A2-4D90-7A90-7B2C1B6A3748}|Bazar.Infrastructure\\Bazar.Infrastructure.csproj|c:\\users\\marj\\documents\\github\\5sdb\\4 - ddd\\bazar\\bazar.infrastructure\\services\\ftpservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9001B21B-F1A2-4D90-7A90-7B2C1B6A3748}|Bazar.Infrastructure\\Bazar.Infrastructure.csproj|solutionrelative:bazar.infrastructure\\services\\ftpservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9001B21B-F1A2-4D90-7A90-7B2C1B6A3748}|Bazar.Infrastructure\\Bazar.Infrastructure.csproj|c:\\users\\marj\\documents\\github\\5sdb\\4 - ddd\\bazar\\bazar.infrastructure\\services\\csvparserservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9001B21B-F1A2-4D90-7A90-7B2C1B6A3748}|Bazar.Infrastructure\\Bazar.Infrastructure.csproj|solutionrelative:bazar.infrastructure\\services\\csvparserservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "IntegracaoController.cs",
+              "DocumentMoniker": "C:\\Users\\marJ\\Documents\\GitHub\\5SDB\\4 - DDD\\Bazar\\Bazar.Worker\\IntegracaoController.cs",
+              "RelativeDocumentMoniker": "Bazar.Worker\\IntegracaoController.cs",
+              "ToolTip": "C:\\Users\\marJ\\Documents\\GitHub\\5SDB\\4 - DDD\\Bazar\\Bazar.Worker\\IntegracaoController.cs",
+              "RelativeToolTip": "Bazar.Worker\\IntegracaoController.cs",
+              "ViewState": "AgIAAAEAAAAAAAAAAAAowDoAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-03T22:09:27.321Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\marJ\\Documents\\GitHub\\5SDB\\4 - DDD\\Bazar\\Bazar.Worker\\Program.cs",
+              "RelativeDocumentMoniker": "Bazar.Worker\\Program.cs",
+              "ToolTip": "C:\\Users\\marJ\\Documents\\GitHub\\5SDB\\4 - DDD\\Bazar\\Bazar.Worker\\Program.cs",
+              "RelativeToolTip": "Bazar.Worker\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAC8AAAAKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-27T23:03:28.539Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "FtpService.cs",
+              "DocumentMoniker": "C:\\Users\\marJ\\Documents\\GitHub\\5SDB\\4 - DDD\\Bazar\\Bazar.Infrastructure\\Services\\FtpService.cs",
+              "RelativeDocumentMoniker": "Bazar.Infrastructure\\Services\\FtpService.cs",
+              "ToolTip": "C:\\Users\\marJ\\Documents\\GitHub\\5SDB\\4 - DDD\\Bazar\\Bazar.Infrastructure\\Services\\FtpService.cs",
+              "RelativeToolTip": "Bazar.Infrastructure\\Services\\FtpService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB0AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-27T23:03:02.384Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "CsvParserService.cs",
+              "DocumentMoniker": "C:\\Users\\marJ\\Documents\\GitHub\\5SDB\\4 - DDD\\Bazar\\Bazar.Infrastructure\\Services\\CsvParserService.cs",
+              "RelativeDocumentMoniker": "Bazar.Infrastructure\\Services\\CsvParserService.cs",
+              "ToolTip": "C:\\Users\\marJ\\Documents\\GitHub\\5SDB\\4 - DDD\\Bazar\\Bazar.Infrastructure\\Services\\CsvParserService.cs",
+              "RelativeToolTip": "Bazar.Infrastructure\\Services\\CsvParserService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-27T23:02:45.753Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

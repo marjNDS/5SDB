@@ -1,0 +1,313 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\marJ\\Documents\\GitHub\\5SDB\\5 - prova\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{C63BF565-CD74-CD38-2E36-D010EEA4DF38}|CalangoAPI.Domain\\CalangoAPI.Domain.csproj|c:\\users\\marj\\documents\\github\\5sdb\\5 - prova\\calangoapi.domain\\entities\\frota\\onibus.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C63BF565-CD74-CD38-2E36-D010EEA4DF38}|CalangoAPI.Domain\\CalangoAPI.Domain.csproj|solutionrelative:calangoapi.domain\\entities\\frota\\onibus.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C63BF565-CD74-CD38-2E36-D010EEA4DF38}|CalangoAPI.Domain\\CalangoAPI.Domain.csproj|c:\\users\\marj\\documents\\github\\5sdb\\5 - prova\\calangoapi.domain\\entities\\malha\\rota.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C63BF565-CD74-CD38-2E36-D010EEA4DF38}|CalangoAPI.Domain\\CalangoAPI.Domain.csproj|solutionrelative:calangoapi.domain\\entities\\malha\\rota.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C63BF565-CD74-CD38-2E36-D010EEA4DF38}|CalangoAPI.Domain\\CalangoAPI.Domain.csproj|c:\\users\\marj\\documents\\github\\5sdb\\5 - prova\\calangoapi.domain\\entities\\malha\\parada.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C63BF565-CD74-CD38-2E36-D010EEA4DF38}|CalangoAPI.Domain\\CalangoAPI.Domain.csproj|solutionrelative:calangoapi.domain\\entities\\malha\\parada.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E194BCFB-FD79-56D8-1CDF-4CE7B16695A0}|CalangoAPI.Application\\CalangoAPI.Application.csproj|c:\\users\\marj\\documents\\github\\5sdb\\5 - prova\\calangoapi.application\\services\\vendasappservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E194BCFB-FD79-56D8-1CDF-4CE7B16695A0}|CalangoAPI.Application\\CalangoAPI.Application.csproj|solutionrelative:calangoapi.application\\services\\vendasappservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E194BCFB-FD79-56D8-1CDF-4CE7B16695A0}|CalangoAPI.Application\\CalangoAPI.Application.csproj|c:\\users\\marj\\documents\\github\\5sdb\\5 - prova\\calangoapi.application\\services\\operacionalappservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E194BCFB-FD79-56D8-1CDF-4CE7B16695A0}|CalangoAPI.Application\\CalangoAPI.Application.csproj|solutionrelative:calangoapi.application\\services\\operacionalappservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E194BCFB-FD79-56D8-1CDF-4CE7B16695A0}|CalangoAPI.Application\\CalangoAPI.Application.csproj|c:\\users\\marj\\documents\\github\\5sdb\\5 - prova\\calangoapi.application\\dtos\\requests\\cadastrarviagemrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E194BCFB-FD79-56D8-1CDF-4CE7B16695A0}|CalangoAPI.Application\\CalangoAPI.Application.csproj|solutionrelative:calangoapi.application\\dtos\\requests\\cadastrarviagemrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1FE725B8-BDE9-0D55-526C-3791EB0DFE82}|CalangoAPI.Infrastructure\\CalangoAPI.Infrastructure.csproj|c:\\users\\marj\\documents\\github\\5sdb\\5 - prova\\calangoapi.infrastructure\\data\\repositories\\motoristarepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1FE725B8-BDE9-0D55-526C-3791EB0DFE82}|CalangoAPI.Infrastructure\\CalangoAPI.Infrastructure.csproj|solutionrelative:calangoapi.infrastructure\\data\\repositories\\motoristarepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{68806691-1990-A783-4FAD-67323CBAB4E3}|CalangoAPI.API\\CalangoAPI.API.csproj|c:\\users\\marj\\documents\\github\\5sdb\\5 - prova\\calangoapi.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{68806691-1990-A783-4FAD-67323CBAB4E3}|CalangoAPI.API\\CalangoAPI.API.csproj|solutionrelative:calangoapi.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{68806691-1990-A783-4FAD-67323CBAB4E3}|CalangoAPI.API\\CalangoAPI.API.csproj|c:\\users\\marj\\documents\\github\\5sdb\\5 - prova\\calangoapi.api\\controllers\\v1\\motoristascontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{68806691-1990-A783-4FAD-67323CBAB4E3}|CalangoAPI.API\\CalangoAPI.API.csproj|solutionrelative:calangoapi.api\\controllers\\v1\\motoristascontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E194BCFB-FD79-56D8-1CDF-4CE7B16695A0}|CalangoAPI.Application\\CalangoAPI.Application.csproj|c:\\users\\marj\\documents\\github\\5sdb\\5 - prova\\calangoapi.application\\services\\motoristasappservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E194BCFB-FD79-56D8-1CDF-4CE7B16695A0}|CalangoAPI.Application\\CalangoAPI.Application.csproj|solutionrelative:calangoapi.application\\services\\motoristasappservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E194BCFB-FD79-56D8-1CDF-4CE7B16695A0}|CalangoAPI.Application\\CalangoAPI.Application.csproj|c:\\users\\marj\\documents\\github\\5sdb\\5 - prova\\calangoapi.application\\interfaces\\imotoristasappservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E194BCFB-FD79-56D8-1CDF-4CE7B16695A0}|CalangoAPI.Application\\CalangoAPI.Application.csproj|solutionrelative:calangoapi.application\\interfaces\\imotoristasappservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E194BCFB-FD79-56D8-1CDF-4CE7B16695A0}|CalangoAPI.Application\\CalangoAPI.Application.csproj|c:\\users\\marj\\documents\\github\\5sdb\\5 - prova\\calangoapi.application\\dtos\\requests\\alocarmotoristarequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E194BCFB-FD79-56D8-1CDF-4CE7B16695A0}|CalangoAPI.Application\\CalangoAPI.Application.csproj|solutionrelative:calangoapi.application\\dtos\\requests\\alocarmotoristarequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E194BCFB-FD79-56D8-1CDF-4CE7B16695A0}|CalangoAPI.Application\\CalangoAPI.Application.csproj|c:\\users\\marj\\documents\\github\\5sdb\\5 - prova\\calangoapi.application\\dtos\\requests\\cadastrarmotoristarequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E194BCFB-FD79-56D8-1CDF-4CE7B16695A0}|CalangoAPI.Application\\CalangoAPI.Application.csproj|solutionrelative:calangoapi.application\\dtos\\requests\\cadastrarmotoristarequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1FE725B8-BDE9-0D55-526C-3791EB0DFE82}|CalangoAPI.Infrastructure\\CalangoAPI.Infrastructure.csproj|c:\\users\\marj\\documents\\github\\5sdb\\5 - prova\\calangoapi.infrastructure\\data\\repositories\\viagemrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1FE725B8-BDE9-0D55-526C-3791EB0DFE82}|CalangoAPI.Infrastructure\\CalangoAPI.Infrastructure.csproj|solutionrelative:calangoapi.infrastructure\\data\\repositories\\viagemrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1FE725B8-BDE9-0D55-526C-3791EB0DFE82}|CalangoAPI.Infrastructure\\CalangoAPI.Infrastructure.csproj|c:\\users\\marj\\documents\\github\\5sdb\\5 - prova\\calangoapi.infrastructure\\data\\context\\onibusdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1FE725B8-BDE9-0D55-526C-3791EB0DFE82}|CalangoAPI.Infrastructure\\CalangoAPI.Infrastructure.csproj|solutionrelative:calangoapi.infrastructure\\data\\context\\onibusdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C63BF565-CD74-CD38-2E36-D010EEA4DF38}|CalangoAPI.Domain\\CalangoAPI.Domain.csproj|c:\\users\\marj\\documents\\github\\5sdb\\5 - prova\\calangoapi.domain\\interfaces\\repositories\\iviagemrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C63BF565-CD74-CD38-2E36-D010EEA4DF38}|CalangoAPI.Domain\\CalangoAPI.Domain.csproj|solutionrelative:calangoapi.domain\\interfaces\\repositories\\iviagemrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C63BF565-CD74-CD38-2E36-D010EEA4DF38}|CalangoAPI.Domain\\CalangoAPI.Domain.csproj|c:\\users\\marj\\documents\\github\\5sdb\\5 - prova\\calangoapi.domain\\interfaces\\repositories\\imotoristarepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C63BF565-CD74-CD38-2E36-D010EEA4DF38}|CalangoAPI.Domain\\CalangoAPI.Domain.csproj|solutionrelative:calangoapi.domain\\interfaces\\repositories\\imotoristarepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 3,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Rota.cs",
+              "DocumentMoniker": "C:\\Users\\marJ\\Documents\\GitHub\\5SDB\\5 - prova\\CalangoAPI.Domain\\Entities\\Malha\\Rota.cs",
+              "RelativeDocumentMoniker": "CalangoAPI.Domain\\Entities\\Malha\\Rota.cs",
+              "ToolTip": "C:\\Users\\marJ\\Documents\\GitHub\\5SDB\\5 - prova\\CalangoAPI.Domain\\Entities\\Malha\\Rota.cs",
+              "RelativeToolTip": "CalangoAPI.Domain\\Entities\\Malha\\Rota.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-01T18:38:12.464Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Parada.cs",
+              "DocumentMoniker": "C:\\Users\\marJ\\Documents\\GitHub\\5SDB\\5 - prova\\CalangoAPI.Domain\\Entities\\Malha\\Parada.cs",
+              "RelativeDocumentMoniker": "CalangoAPI.Domain\\Entities\\Malha\\Parada.cs",
+              "ToolTip": "C:\\Users\\marJ\\Documents\\GitHub\\5SDB\\5 - prova\\CalangoAPI.Domain\\Entities\\Malha\\Parada.cs",
+              "RelativeToolTip": "CalangoAPI.Domain\\Entities\\Malha\\Parada.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAcAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-01T18:38:09.196Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Onibus.cs",
+              "DocumentMoniker": "C:\\Users\\marJ\\Documents\\GitHub\\5SDB\\5 - prova\\CalangoAPI.Domain\\Entities\\Frota\\Onibus.cs",
+              "RelativeDocumentMoniker": "CalangoAPI.Domain\\Entities\\Frota\\Onibus.cs",
+              "ToolTip": "C:\\Users\\marJ\\Documents\\GitHub\\5SDB\\5 - prova\\CalangoAPI.Domain\\Entities\\Frota\\Onibus.cs",
+              "RelativeToolTip": "CalangoAPI.Domain\\Entities\\Frota\\Onibus.cs",
+              "ViewState": "AgIAAAsAAAAAAAAAAAA8wB8AAABHAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-01T18:37:48.45Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "VendasAppService.cs",
+              "DocumentMoniker": "C:\\Users\\marJ\\Documents\\GitHub\\5SDB\\5 - prova\\CalangoAPI.Application\\Services\\VendasAppService.cs",
+              "RelativeDocumentMoniker": "CalangoAPI.Application\\Services\\VendasAppService.cs",
+              "ToolTip": "C:\\Users\\marJ\\Documents\\GitHub\\5SDB\\5 - prova\\CalangoAPI.Application\\Services\\VendasAppService.cs",
+              "RelativeToolTip": "CalangoAPI.Application\\Services\\VendasAppService.cs",
+              "ViewState": "AgIAACMAAAAAAAAAAAAcwCkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-01T18:34:29.47Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "OperacionalAppService.cs",
+              "DocumentMoniker": "C:\\Users\\marJ\\Documents\\GitHub\\5SDB\\5 - prova\\CalangoAPI.Application\\Services\\OperacionalAppService.cs",
+              "RelativeDocumentMoniker": "CalangoAPI.Application\\Services\\OperacionalAppService.cs",
+              "ToolTip": "C:\\Users\\marJ\\Documents\\GitHub\\5SDB\\5 - prova\\CalangoAPI.Application\\Services\\OperacionalAppService.cs",
+              "RelativeToolTip": "CalangoAPI.Application\\Services\\OperacionalAppService.cs",
+              "ViewState": "AgIAAA0AAAAAAAAAAAAiwB0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-01T18:32:08.116Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "CadastrarViagemRequest.cs",
+              "DocumentMoniker": "C:\\Users\\marJ\\Documents\\GitHub\\5SDB\\5 - prova\\CalangoAPI.Application\\DTOs\\Requests\\CadastrarViagemRequest.cs",
+              "RelativeDocumentMoniker": "CalangoAPI.Application\\DTOs\\Requests\\CadastrarViagemRequest.cs",
+              "ToolTip": "C:\\Users\\marJ\\Documents\\GitHub\\5SDB\\5 - prova\\CalangoAPI.Application\\DTOs\\Requests\\CadastrarViagemRequest.cs",
+              "RelativeToolTip": "CalangoAPI.Application\\DTOs\\Requests\\CadastrarViagemRequest.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAABxAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-01T18:31:54.485Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "MotoristasAppService.cs",
+              "DocumentMoniker": "C:\\Users\\marJ\\Documents\\GitHub\\5SDB\\5 - prova\\CalangoAPI.Application\\Services\\MotoristasAppService.cs",
+              "RelativeDocumentMoniker": "CalangoAPI.Application\\Services\\MotoristasAppService.cs",
+              "ToolTip": "C:\\Users\\marJ\\Documents\\GitHub\\5SDB\\5 - prova\\CalangoAPI.Application\\Services\\MotoristasAppService.cs",
+              "RelativeToolTip": "CalangoAPI.Application\\Services\\MotoristasAppService.cs",
+              "ViewState": "AgIAABoAAAAAAAAAAAAAADUAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-01T18:24:55.437Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "MotoristaRepository.cs",
+              "DocumentMoniker": "C:\\Users\\marJ\\Documents\\GitHub\\5SDB\\5 - prova\\CalangoAPI.Infrastructure\\Data\\Repositories\\MotoristaRepository.cs",
+              "RelativeDocumentMoniker": "CalangoAPI.Infrastructure\\Data\\Repositories\\MotoristaRepository.cs",
+              "ToolTip": "C:\\Users\\marJ\\Documents\\GitHub\\5SDB\\5 - prova\\CalangoAPI.Infrastructure\\Data\\Repositories\\MotoristaRepository.cs",
+              "RelativeToolTip": "CalangoAPI.Infrastructure\\Data\\Repositories\\MotoristaRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-01T18:23:46.529Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "MotoristasController.cs",
+              "DocumentMoniker": "C:\\Users\\marJ\\Documents\\GitHub\\5SDB\\5 - prova\\CalangoAPI.API\\Controllers\\V1\\MotoristasController.cs",
+              "RelativeDocumentMoniker": "CalangoAPI.API\\Controllers\\V1\\MotoristasController.cs",
+              "ToolTip": "C:\\Users\\marJ\\Documents\\GitHub\\5SDB\\5 - prova\\CalangoAPI.API\\Controllers\\V1\\MotoristasController.cs",
+              "RelativeToolTip": "CalangoAPI.API\\Controllers\\V1\\MotoristasController.cs",
+              "ViewState": "AgIAAAoAAAAAAAAAAAAAACUAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-01T18:25:06.499Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "IMotoristasAppService.cs",
+              "DocumentMoniker": "C:\\Users\\marJ\\Documents\\GitHub\\5SDB\\5 - prova\\CalangoAPI.Application\\Interfaces\\IMotoristasAppService.cs",
+              "RelativeDocumentMoniker": "CalangoAPI.Application\\Interfaces\\IMotoristasAppService.cs",
+              "ToolTip": "C:\\Users\\marJ\\Documents\\GitHub\\5SDB\\5 - prova\\CalangoAPI.Application\\Interfaces\\IMotoristasAppService.cs",
+              "RelativeToolTip": "CalangoAPI.Application\\Interfaces\\IMotoristasAppService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-01T18:24:44.816Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "AlocarMotoristaRequest.cs",
+              "DocumentMoniker": "C:\\Users\\marJ\\Documents\\GitHub\\5SDB\\5 - prova\\CalangoAPI.Application\\DTOs\\Requests\\AlocarMotoristaRequest.cs",
+              "RelativeDocumentMoniker": "CalangoAPI.Application\\DTOs\\Requests\\AlocarMotoristaRequest.cs",
+              "ToolTip": "C:\\Users\\marJ\\Documents\\GitHub\\5SDB\\5 - prova\\CalangoAPI.Application\\DTOs\\Requests\\AlocarMotoristaRequest.cs",
+              "RelativeToolTip": "CalangoAPI.Application\\DTOs\\Requests\\AlocarMotoristaRequest.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAABGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-01T18:24:36.749Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "CadastrarMotoristaRequest.cs",
+              "DocumentMoniker": "C:\\Users\\marJ\\Documents\\GitHub\\5SDB\\5 - prova\\CalangoAPI.Application\\DTOs\\Requests\\CadastrarMotoristaRequest.cs",
+              "RelativeDocumentMoniker": "CalangoAPI.Application\\DTOs\\Requests\\CadastrarMotoristaRequest.cs",
+              "ToolTip": "C:\\Users\\marJ\\Documents\\GitHub\\5SDB\\5 - prova\\CalangoAPI.Application\\DTOs\\Requests\\CadastrarMotoristaRequest.cs",
+              "RelativeToolTip": "CalangoAPI.Application\\DTOs\\Requests\\CadastrarMotoristaRequest.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAABLAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-01T18:24:30.413Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "ViagemRepository.cs",
+              "DocumentMoniker": "C:\\Users\\marJ\\Documents\\GitHub\\5SDB\\5 - prova\\CalangoAPI.Infrastructure\\Data\\Repositories\\ViagemRepository.cs",
+              "RelativeDocumentMoniker": "CalangoAPI.Infrastructure\\Data\\Repositories\\ViagemRepository.cs",
+              "ToolTip": "C:\\Users\\marJ\\Documents\\GitHub\\5SDB\\5 - prova\\CalangoAPI.Infrastructure\\Data\\Repositories\\ViagemRepository.cs",
+              "RelativeToolTip": "CalangoAPI.Infrastructure\\Data\\Repositories\\ViagemRepository.cs",
+              "ViewState": "AgIAABIAAAAAAAAAAAAowCoAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-01T18:24:02.665Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\marJ\\Documents\\GitHub\\5SDB\\5 - prova\\CalangoAPI.API\\Program.cs",
+              "RelativeDocumentMoniker": "CalangoAPI.API\\Program.cs",
+              "ToolTip": "C:\\Users\\marJ\\Documents\\GitHub\\5SDB\\5 - prova\\CalangoAPI.API\\Program.cs",
+              "RelativeToolTip": "CalangoAPI.API\\Program.cs",
+              "ViewState": "AgIAABIAAAAAAAAAAAAAACUAAAAhAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-01T18:25:14.12Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "OnibusDbContext.cs",
+              "DocumentMoniker": "C:\\Users\\marJ\\Documents\\GitHub\\5SDB\\5 - prova\\CalangoAPI.Infrastructure\\Data\\Context\\OnibusDbContext.cs",
+              "RelativeDocumentMoniker": "CalangoAPI.Infrastructure\\Data\\Context\\OnibusDbContext.cs",
+              "ToolTip": "C:\\Users\\marJ\\Documents\\GitHub\\5SDB\\5 - prova\\CalangoAPI.Infrastructure\\Data\\Context\\OnibusDbContext.cs",
+              "RelativeToolTip": "CalangoAPI.Infrastructure\\Data\\Context\\OnibusDbContext.cs",
+              "ViewState": "AgIAAD0AAAAAAAAAAAAwwEcAAAAmAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-01T18:21:51.324Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "IViagemRepository.cs",
+              "DocumentMoniker": "C:\\Users\\marJ\\Documents\\GitHub\\5SDB\\5 - prova\\CalangoAPI.Domain\\Interfaces\\Repositories\\IViagemRepository.cs",
+              "RelativeDocumentMoniker": "CalangoAPI.Domain\\Interfaces\\Repositories\\IViagemRepository.cs",
+              "ToolTip": "C:\\Users\\marJ\\Documents\\GitHub\\5SDB\\5 - prova\\CalangoAPI.Domain\\Interfaces\\Repositories\\IViagemRepository.cs",
+              "RelativeToolTip": "CalangoAPI.Domain\\Interfaces\\Repositories\\IViagemRepository.cs",
+              "ViewState": "AgIAAAEAAAAAAAAAAAD4vwoAAAASAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-01T18:20:59.942Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "IMotoristaRepository.cs",
+              "DocumentMoniker": "C:\\Users\\marJ\\Documents\\GitHub\\5SDB\\5 - prova\\CalangoAPI.Domain\\Interfaces\\Repositories\\IMotoristaRepository.cs",
+              "RelativeDocumentMoniker": "CalangoAPI.Domain\\Interfaces\\Repositories\\IMotoristaRepository.cs",
+              "ToolTip": "C:\\Users\\marJ\\Documents\\GitHub\\5SDB\\5 - prova\\CalangoAPI.Domain\\Interfaces\\Repositories\\IMotoristaRepository.cs",
+              "RelativeToolTip": "CalangoAPI.Domain\\Interfaces\\Repositories\\IMotoristaRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-01T18:20:51.697Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

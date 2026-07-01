@@ -1,0 +1,144 @@
+[
+  {
+    "ContainingType": "CalangoAPI.API.Controllers.V1.MotoristasController",
+    "Method": "Cadastrar",
+    "RelativePath": "api/v1/Motoristas",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "CalangoAPI.Application.DTOs.Requests.CadastrarMotoristaRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CalangoAPI.API.Controllers.V1.MotoristasController",
+    "Method": "Alocar",
+    "RelativePath": "api/v1/Motoristas/escalas",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "CalangoAPI.Application.DTOs.Requests.AlocarMotoristaRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CalangoAPI.API.Controllers.V1.OnibusController",
+    "Method": "Cadastrar",
+    "RelativePath": "api/v1/Onibus",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "CalangoAPI.Application.DTOs.Requests.CadastrarOnibusRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CalangoAPI.API.Controllers.V1.OnibusController",
+    "Method": "Listar",
+    "RelativePath": "api/v1/Onibus",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CalangoAPI.API.Controllers.V1.PassagensController",
+    "Method": "CalcularPreco",
+    "RelativePath": "api/v1/Passagens/calcular-preco",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "CalangoAPI.Application.DTOs.Requests.CalcularPrecoRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CalangoAPI.API.Controllers.V1.PassagensController",
+    "Method": "Comprar",
+    "RelativePath": "api/v1/Passagens/comprar",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "CalangoAPI.Application.DTOs.Requests.ComprarPassagemRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CalangoAPI.API.Controllers.V1.RotasController",
+    "Method": "Cadastrar",
+    "RelativePath": "api/v1/Rotas",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "CalangoAPI.Application.DTOs.Requests.CadastrarRotaRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CalangoAPI.API.Controllers.V1.RotasController",
+    "Method": "Listar",
+    "RelativePath": "api/v1/Rotas",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CalangoAPI.API.Controllers.V1.ViagensController",
+    "Method": "Cadastrar",
+    "RelativePath": "api/v1/Viagens",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "CalangoAPI.Application.DTOs.Requests.CadastrarViagemRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CalangoAPI.API.Controllers.V1.ViagensController",
+    "Method": "Listar",
+    "RelativePath": "api/v1/Viagens",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  }
+]

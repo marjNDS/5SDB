@@ -1,0 +1,6 @@
+<Solution>
+  <Project Path="Bazar.Application/Bazar.Application.csproj" />
+  <Project Path="Bazar.Domain/Bazar.Domain.csproj" />
+  <Project Path="Bazar.Infrastructure/Bazar.Infrastructure.csproj" />
+  <Project Path="Bazar.Worker/Bazar.Worker.csproj" />
+</Solution>

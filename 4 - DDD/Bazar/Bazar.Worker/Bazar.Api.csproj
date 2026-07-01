@@ -1,0 +1,14 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UserSecretsId>dotnet-Bazar.Worker-b0afadc4-de25-49f3-b7ee-60ce8ee56341</UserSecretsId>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Bazar.Application\Bazar.Application.csproj" />
+    <ProjectReference Include="..\Bazar.Infrastructure\Bazar.Infrastructure.csproj" />
+  </ItemGroup>
+</Project>

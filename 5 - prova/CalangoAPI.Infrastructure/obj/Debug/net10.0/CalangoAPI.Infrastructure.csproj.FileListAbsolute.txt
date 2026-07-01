@@ -1,0 +1,16 @@
+C:\Users\marJ\Documents\GitHub\5SDB\5 - prova\CalangoAPI.Infrastructure\bin\Debug\net10.0\CalangoAPI.Infrastructure.deps.json
+C:\Users\marJ\Documents\GitHub\5SDB\5 - prova\CalangoAPI.Infrastructure\bin\Debug\net10.0\CalangoAPI.Infrastructure.dll
+C:\Users\marJ\Documents\GitHub\5SDB\5 - prova\CalangoAPI.Infrastructure\bin\Debug\net10.0\CalangoAPI.Infrastructure.pdb
+C:\Users\marJ\Documents\GitHub\5SDB\5 - prova\CalangoAPI.Infrastructure\bin\Debug\net10.0\CalangoAPI.Domain.dll
+C:\Users\marJ\Documents\GitHub\5SDB\5 - prova\CalangoAPI.Infrastructure\bin\Debug\net10.0\CalangoAPI.Domain.pdb
+C:\Users\marJ\Documents\GitHub\5SDB\5 - prova\CalangoAPI.Infrastructure\obj\Debug\net10.0\CalangoAPI.Infrastructure.csproj.AssemblyReference.cache
+C:\Users\marJ\Documents\GitHub\5SDB\5 - prova\CalangoAPI.Infrastructure\obj\Debug\net10.0\CalangoAPI.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\marJ\Documents\GitHub\5SDB\5 - prova\CalangoAPI.Infrastructure\obj\Debug\net10.0\CalangoAPI.Infrastructure.AssemblyInfoInputs.cache
+C:\Users\marJ\Documents\GitHub\5SDB\5 - prova\CalangoAPI.Infrastructure\obj\Debug\net10.0\CalangoAPI.Infrastructure.AssemblyInfo.cs
+C:\Users\marJ\Documents\GitHub\5SDB\5 - prova\CalangoAPI.Infrastructure\obj\Debug\net10.0\CalangoAPI.Infrastructure.csproj.CoreCompileInputs.cache
+C:\Users\marJ\Documents\GitHub\5SDB\5 - prova\CalangoAPI.Infrastructure\obj\Debug\net10.0\CalangoAPI.Infrastructure.sourcelink.json
+C:\Users\marJ\Documents\GitHub\5SDB\5 - prova\CalangoAPI.Infrastructure\obj\Debug\net10.0\CalangoA.3463AFC1.Up2Date
+C:\Users\marJ\Documents\GitHub\5SDB\5 - prova\CalangoAPI.Infrastructure\obj\Debug\net10.0\CalangoAPI.Infrastructure.dll
+C:\Users\marJ\Documents\GitHub\5SDB\5 - prova\CalangoAPI.Infrastructure\obj\Debug\net10.0\refint\CalangoAPI.Infrastructure.dll
+C:\Users\marJ\Documents\GitHub\5SDB\5 - prova\CalangoAPI.Infrastructure\obj\Debug\net10.0\CalangoAPI.Infrastructure.pdb
+C:\Users\marJ\Documents\GitHub\5SDB\5 - prova\CalangoAPI.Infrastructure\obj\Debug\net10.0\ref\CalangoAPI.Infrastructure.dll

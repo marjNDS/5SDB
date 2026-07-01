@@ -1,0 +1,6 @@
+<Solution>
+  <Project Path="CalangoAPI.API/CalangoAPI.API.csproj" />
+  <Project Path="CalangoAPI.Application/CalangoAPI.Application.csproj" />
+  <Project Path="CalangoAPI.Domain/CalangoAPI.Domain.csproj" />
+  <Project Path="CalangoAPI.Infrastructure/CalangoAPI.Infrastructure.csproj" />
+</Solution>
