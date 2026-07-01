@@ -4,6 +4,7 @@ using CalangoAPI.Domain.Entities.Operacional;
 using CalangoAPI.Domain.Entities.RecursosHumanos;
 using CalangoAPI.Domain.Entities.Vendas;
 using CalangoAPI.Domain.Entities.RecursosHumanos;
+using CalangoAPI.Domain.Entities.Identidade;
 using Microsoft.EntityFrameworkCore;
 
 namespace CalangoAPI.Infrastructure.Data.Context;
@@ -18,6 +19,7 @@ public class OnibusDbContext : DbContext
     public DbSet<Viagem> Viagens { get; set; }
     public DbSet<Passagem> Passagens { get; set; }
     public DbSet<Motorista> Motoristas { get; set; }
+    public DbSet<Usuario> Usuarios { get; set; }
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
@@ -90,6 +92,15 @@ public class OnibusDbContext : DbContext
             entity.HasKey(e => e.Id);
             entity.Property(e => e.Nome).IsRequired().HasMaxLength(150);
             entity.Property(e => e.CartaConducao).IsRequired().HasMaxLength(20);
+        });
+
+        //Mapeamento Usuario
+        modelBuilder.Entity<Usuario>(entity =>
+        {
+            entity.HasKey(e => e.Id);
+            entity.HasIndex(e => e.Email).IsUnique();
+            entity.Property(e => e.Email).IsRequired().HasMaxLength(150);
+            entity.Property(e => e.Role).IsRequired().HasMaxLength(20);
         });
 
         base.OnModelCreating(modelBuilder);

@@ -1,10 +1,85 @@
 {
-  "openapi": "3.0.4",
+  "openapi": "3.1.1",
   "info": {
-    "title": "CalangoAPI.API",
-    "version": "1.0"
+    "title": "CalangoAPI.API | v1",
+    "version": "1.0.0"
   },
+  "servers": [
+    {
+      "url": "http://localhost:5210"
+    }
+  ],
   "paths": {
+    "/api/v1/Auth/registrar": {
+      "post": {
+        "tags": [
+          "Auth"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/RegistrarRequest"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/RegistrarRequest"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/RegistrarRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        },
+        "security": [
+          { }
+        ]
+      }
+    },
+    "/api/v1/Auth/login": {
+      "post": {
+        "tags": [
+          "Auth"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/LoginRequest"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/LoginRequest"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/LoginRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        },
+        "security": [
+          { }
+        ]
+      }
+    },
     "/api/v1/Motoristas": {
       "post": {
         "tags": [
@@ -27,13 +102,17 @@
                 "$ref": "#/components/schemas/CadastrarMotoristaRequest"
               }
             }
-          }
+          },
+          "required": true
         },
         "responses": {
           "200": {
             "description": "OK"
           }
-        }
+        },
+        "security": [
+          { }
+        ]
       }
     },
     "/api/v1/Motoristas/escalas": {
@@ -58,13 +137,17 @@
                 "$ref": "#/components/schemas/AlocarMotoristaRequest"
               }
             }
-          }
+          },
+          "required": true
         },
         "responses": {
           "200": {
             "description": "OK"
           }
-        }
+        },
+        "security": [
+          { }
+        ]
       }
     },
     "/api/v1/Onibus": {
@@ -89,13 +172,17 @@
                 "$ref": "#/components/schemas/CadastrarOnibusRequest"
               }
             }
-          }
+          },
+          "required": true
         },
         "responses": {
           "200": {
             "description": "OK"
           }
-        }
+        },
+        "security": [
+          { }
+        ]
       },
       "get": {
         "tags": [
@@ -105,7 +192,10 @@
           "200": {
             "description": "OK"
           }
-        }
+        },
+        "security": [
+          { }
+        ]
       }
     },
     "/api/v1/Passagens/calcular-preco": {
@@ -130,13 +220,17 @@
                 "$ref": "#/components/schemas/CalcularPrecoRequest"
               }
             }
-          }
+          },
+          "required": true
         },
         "responses": {
           "200": {
             "description": "OK"
           }
-        }
+        },
+        "security": [
+          { }
+        ]
       }
     },
     "/api/v1/Passagens/comprar": {
@@ -161,13 +255,17 @@
                 "$ref": "#/components/schemas/ComprarPassagemRequest"
               }
             }
-          }
+          },
+          "required": true
         },
         "responses": {
           "200": {
             "description": "OK"
           }
-        }
+        },
+        "security": [
+          { }
+        ]
       }
     },
     "/api/v1/Rotas": {
@@ -192,13 +290,17 @@
                 "$ref": "#/components/schemas/CadastrarRotaRequest"
               }
             }
-          }
+          },
+          "required": true
         },
         "responses": {
           "200": {
             "description": "OK"
           }
-        }
+        },
+        "security": [
+          { }
+        ]
       },
       "get": {
         "tags": [
@@ -208,7 +310,10 @@
           "200": {
             "description": "OK"
           }
-        }
+        },
+        "security": [
+          { }
+        ]
       }
     },
     "/api/v1/Viagens": {
@@ -233,13 +338,17 @@
                 "$ref": "#/components/schemas/CadastrarViagemRequest"
               }
             }
-          }
+          },
+          "required": true
         },
         "responses": {
           "200": {
             "description": "OK"
           }
-        }
+        },
+        "security": [
+          { }
+        ]
       },
       "get": {
         "tags": [
@@ -249,13 +358,20 @@
           "200": {
             "description": "OK"
           }
-        }
+        },
+        "security": [
+          { }
+        ]
       }
     }
   },
   "components": {
     "schemas": {
       "AlocarMotoristaRequest": {
+        "required": [
+          "motoristaId",
+          "viagemId"
+        ],
         "type": "object",
         "properties": {
           "motoristaId": {
@@ -266,67 +382,83 @@
             "type": "string",
             "format": "uuid"
           }
-        },
-        "additionalProperties": false
+        }
       },
       "CadastrarMotoristaRequest": {
+        "required": [
+          "nome",
+          "cartaConducao"
+        ],
         "type": "object",
         "properties": {
           "nome": {
-            "type": "string",
-            "nullable": true
+            "type": "string"
           },
           "cartaConducao": {
-            "type": "string",
-            "nullable": true
+            "type": "string"
           }
-        },
-        "additionalProperties": false
+        }
       },
       "CadastrarOnibusRequest": {
+        "required": [
+          "placa",
+          "capacidade",
+          "tipo"
+        ],
         "type": "object",
         "properties": {
           "placa": {
-            "type": "string",
-            "nullable": true
+            "type": "string"
           },
           "capacidade": {
-            "type": "integer",
+            "pattern": "^-?(?:0|[1-9]\\d*)$",
+            "type": [
+              "integer",
+              "string"
+            ],
             "format": "int32"
           },
           "tipo": {
-            "type": "string",
-            "nullable": true
+            "type": "string"
           }
-        },
-        "additionalProperties": false
+        }
       },
       "CadastrarRotaRequest": {
+        "required": [
+          "nome",
+          "pontosDeVendaIds",
+          "paradas"
+        ],
         "type": "object",
         "properties": {
           "nome": {
-            "type": "string",
-            "nullable": true
+            "type": "string"
           },
           "pontosDeVendaIds": {
             "type": "array",
             "items": {
-              "type": "integer",
+              "pattern": "^-?(?:0|[1-9]\\d*)$",
+              "type": [
+                "integer",
+                "string"
+              ],
               "format": "int32"
-            },
-            "nullable": true
+            }
           },
           "paradas": {
             "type": "array",
             "items": {
               "$ref": "#/components/schemas/ParadaRequest"
-            },
-            "nullable": true
+            }
           }
-        },
-        "additionalProperties": false
+        }
       },
       "CadastrarViagemRequest": {
+        "required": [
+          "rotaId",
+          "onibusId",
+          "dataPartida"
+        ],
         "type": "object",
         "properties": {
           "rotaId": {
@@ -342,14 +474,20 @@
             "format": "date-time"
           },
           "motoristaId": {
-            "type": "string",
-            "format": "uuid",
-            "nullable": true
+            "type": [
+              "null",
+              "string"
+            ],
+            "format": "uuid"
           }
-        },
-        "additionalProperties": false
+        }
       },
       "CalcularPrecoRequest": {
+        "required": [
+          "viagemId",
+          "paradaOrigemId",
+          "paradaDestinoId"
+        ],
         "type": "object",
         "properties": {
           "viagemId": {
@@ -364,10 +502,16 @@
             "type": "string",
             "format": "uuid"
           }
-        },
-        "additionalProperties": false
+        }
       },
       "ComprarPassagemRequest": {
+        "required": [
+          "viagemId",
+          "paradaOrigemId",
+          "paradaDestinoId",
+          "passageiroId",
+          "assento"
+        ],
         "type": "object",
         "properties": {
           "viagemId": {
@@ -387,33 +531,87 @@
             "format": "uuid"
           },
           "assento": {
-            "type": "integer",
+            "pattern": "^-?(?:0|[1-9]\\d*)$",
+            "type": [
+              "integer",
+              "string"
+            ],
             "format": "int32"
           }
-        },
-        "additionalProperties": false
+        }
+      },
+      "LoginRequest": {
+        "required": [
+          "email",
+          "senha"
+        ],
+        "type": "object",
+        "properties": {
+          "email": {
+            "type": "string"
+          },
+          "senha": {
+            "type": "string"
+          }
+        }
       },
       "ParadaRequest": {
+        "required": [
+          "nomeLocalidade",
+          "ordem",
+          "distanciaInicialKm"
+        ],
         "type": "object",
         "properties": {
           "nomeLocalidade": {
-            "type": "string",
-            "nullable": true
+            "type": "string"
           },
           "ordem": {
-            "type": "integer",
+            "pattern": "^-?(?:0|[1-9]\\d*)$",
+            "type": [
+              "integer",
+              "string"
+            ],
             "format": "int32"
           },
           "distanciaInicialKm": {
-            "type": "number",
+            "pattern": "^-?(?:0|[1-9]\\d*)(?:\\.\\d+)?$",
+            "type": [
+              "number",
+              "string"
+            ],
             "format": "double"
           }
-        },
-        "additionalProperties": false
+        }
+      },
+      "RegistrarRequest": {
+        "required": [
+          "email",
+          "senha"
+        ],
+        "type": "object",
+        "properties": {
+          "email": {
+            "type": "string"
+          },
+          "senha": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "securitySchemes": {
+      "Bearer": {
+        "type": "http",
+        "scheme": "bearer",
+        "bearerFormat": "JWT"
       }
     }
   },
   "tags": [
+    {
+      "name": "Auth"
+    },
     {
       "name": "Motoristas"
     },

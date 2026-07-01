@@ -1,5 +1,37 @@
 [
   {
+    "ContainingType": "CalangoAPI.API.Controllers.V1.AuthController",
+    "Method": "Login",
+    "RelativePath": "api/v1/Auth/login",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "CalangoAPI.Application.DTOs.Requests.LoginRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CalangoAPI.API.Controllers.V1.AuthController",
+    "Method": "Registrar",
+    "RelativePath": "api/v1/Auth/registrar",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "CalangoAPI.Application.DTOs.Requests.RegistrarRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "CalangoAPI.API.Controllers.V1.MotoristasController",
     "Method": "Cadastrar",
     "RelativePath": "api/v1/Motoristas",
