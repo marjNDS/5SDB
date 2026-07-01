@@ -1,6 +1,7 @@
 using Microsoft.AspNetCore.Mvc;
 using CalangoAPI.Application.DTOs.Requests;
 using CalangoAPI.Application.Interfaces;
+using CalangoAPI.Domain.Exceptions;
 
 namespace CalangoAPI.API.Controllers.V1;
 
@@ -34,5 +35,26 @@ public class MotoristasController : ControllerBase
         {
             return BadRequest(new { Erro = ex.Message });
         }
+    }
+
+    [HttpGet("{id:guid}")]
+    public async Task<IActionResult> ObterPorId(Guid id)
+    {
+        try
+        {
+            var motorista = await _motoristasAppService.ObterMotoristaPorIdAsync(id);
+            return Ok(motorista);
+        }
+        catch (MotoristaNaoEncontradoException ex)
+        {
+            return NotFound(new { Erro = ex.Message });
+        }
+    }
+
+    [HttpGet]
+    public async Task<IActionResult> ObterTodos()
+    {
+        var motoristas = await _motoristasAppService.ObterTodosMotoristasAsync();
+        return Ok(motoristas);
     }
 }

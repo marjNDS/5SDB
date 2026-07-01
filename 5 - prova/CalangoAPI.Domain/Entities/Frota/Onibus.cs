@@ -25,7 +25,7 @@ public class Onibus
 
     private void ValidarRegras(int capacidade, string tipo)
     {
-        var capacidadesPermitidas = new[] { 23, 28, 32, 56 };
+        var capacidadesPermitidas = new[] { 23, 28, 32};
         if (!capacidadesPermitidas.Contains(capacidade))
             throw new ArgumentException("A capacidade deve ser 23, 28 ou 32 lugares.");
 

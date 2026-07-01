@@ -25,6 +25,8 @@ C:\Users\marJ\Documents\GitHub\5SDB\5 - prova\CalangoAPI.API\bin\Debug\net10.0\M
 C:\Users\marJ\Documents\GitHub\5SDB\5 - prova\CalangoAPI.API\bin\Debug\net10.0\Microsoft.VisualStudio.SolutionPersistence.dll
 C:\Users\marJ\Documents\GitHub\5SDB\5 - prova\CalangoAPI.API\bin\Debug\net10.0\Mono.TextTemplating.dll
 C:\Users\marJ\Documents\GitHub\5SDB\5 - prova\CalangoAPI.API\bin\Debug\net10.0\Newtonsoft.Json.dll
+C:\Users\marJ\Documents\GitHub\5SDB\5 - prova\CalangoAPI.API\bin\Debug\net10.0\Npgsql.dll
+C:\Users\marJ\Documents\GitHub\5SDB\5 - prova\CalangoAPI.API\bin\Debug\net10.0\Npgsql.EntityFrameworkCore.PostgreSQL.dll
 C:\Users\marJ\Documents\GitHub\5SDB\5 - prova\CalangoAPI.API\bin\Debug\net10.0\Swashbuckle.AspNetCore.Swagger.dll
 C:\Users\marJ\Documents\GitHub\5SDB\5 - prova\CalangoAPI.API\bin\Debug\net10.0\Swashbuckle.AspNetCore.SwaggerGen.dll
 C:\Users\marJ\Documents\GitHub\5SDB\5 - prova\CalangoAPI.API\bin\Debug\net10.0\Swashbuckle.AspNetCore.SwaggerUI.dll
@@ -123,12 +125,10 @@ C:\Users\marJ\Documents\GitHub\5SDB\5 - prova\CalangoAPI.API\obj\Debug\net10.0\s
 C:\Users\marJ\Documents\GitHub\5SDB\5 - prova\CalangoAPI.API\obj\Debug\net10.0\staticwebassets.development.json
 C:\Users\marJ\Documents\GitHub\5SDB\5 - prova\CalangoAPI.API\obj\Debug\net10.0\staticwebassets.build.endpoints.json
 C:\Users\marJ\Documents\GitHub\5SDB\5 - prova\CalangoAPI.API\obj\Debug\net10.0\swae.build.ex.cache
+C:\Users\marJ\Documents\GitHub\5SDB\5 - prova\CalangoAPI.API\obj\Debug\net10.0\staticwebassets.upToDateCheck.txt
 C:\Users\marJ\Documents\GitHub\5SDB\5 - prova\CalangoAPI.API\obj\Debug\net10.0\CalangoA.51DA8F38.Up2Date
 C:\Users\marJ\Documents\GitHub\5SDB\5 - prova\CalangoAPI.API\obj\Debug\net10.0\CalangoAPI.API.dll
 C:\Users\marJ\Documents\GitHub\5SDB\5 - prova\CalangoAPI.API\obj\Debug\net10.0\refint\CalangoAPI.API.dll
 C:\Users\marJ\Documents\GitHub\5SDB\5 - prova\CalangoAPI.API\obj\Debug\net10.0\CalangoAPI.API.pdb
 C:\Users\marJ\Documents\GitHub\5SDB\5 - prova\CalangoAPI.API\obj\Debug\net10.0\CalangoAPI.API.genruntimeconfig.cache
 C:\Users\marJ\Documents\GitHub\5SDB\5 - prova\CalangoAPI.API\obj\Debug\net10.0\ref\CalangoAPI.API.dll
-C:\Users\marJ\Documents\GitHub\5SDB\5 - prova\CalangoAPI.API\bin\Debug\net10.0\Npgsql.dll
-C:\Users\marJ\Documents\GitHub\5SDB\5 - prova\CalangoAPI.API\bin\Debug\net10.0\Npgsql.EntityFrameworkCore.PostgreSQL.dll
-C:\Users\marJ\Documents\GitHub\5SDB\5 - prova\CalangoAPI.API\obj\Debug\net10.0\staticwebassets.upToDateCheck.txt

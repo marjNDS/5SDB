@@ -1,6 +1,8 @@
 using CalangoAPI.Application.DTOs.Requests;
+using CalangoAPI.Application.DTOs.Responses;
 using CalangoAPI.Application.Interfaces;
 using CalangoAPI.Domain.Entities.RecursosHumanos;
+using CalangoAPI.Domain.Exceptions;
 using CalangoAPI.Domain.Interfaces.Repositories;
 using CalangoAPI.Domain.Services;
 
@@ -42,7 +44,6 @@ public class MotoristasAppService : IMotoristasAppService
 
         var ultimaViagem = await _viagemRepository.ObterUltimaViagemDoMotoristaAsync(request.MotoristaId);
 
-        // Calcula a distância total da rota atual
         var paradas = rota.Paradas.OrderBy(p => p.Ordem).ToList();
         var distanciaTotal = paradas.Last().DistanciaInicialKm - paradas.First().DistanciaInicialKm;
 
@@ -50,5 +51,19 @@ public class MotoristasAppService : IMotoristasAppService
 
         viagem.AlocarMotorista(request.MotoristaId);
         await _viagemRepository.SalvarAlteracoesAsync();
+    }
+
+    public async Task<MotoristaResponse> ObterMotoristaPorIdAsync(Guid id)
+    {
+        var motorista = await _motoristaRepository.ObterPorIdAsync(id)
+            ?? throw new MotoristaNaoEncontradoException(id);
+
+        return MotoristaResponse.FromEntity(motorista);
+    }
+
+    public async Task<IEnumerable<MotoristaResponse>> ObterTodosMotoristasAsync()
+    {
+        var motoristas = await _motoristaRepository.ObterTodosAsync();
+        return motoristas.Select(MotoristaResponse.FromEntity);
     }
 }

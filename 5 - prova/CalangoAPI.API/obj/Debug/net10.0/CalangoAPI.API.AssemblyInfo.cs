@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("CalangoAPI.API")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+09d4675cb627ea54a970b81c6d630c3b8ad2912c")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+b4630c5d7d5881b5b6cf8daf114e8b5a4a6082d3")]
 [assembly: System.Reflection.AssemblyProductAttribute("CalangoAPI.API")]
 [assembly: System.Reflection.AssemblyTitleAttribute("CalangoAPI.API")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

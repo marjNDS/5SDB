@@ -24,6 +24,11 @@ public class MotoristaRepository : IMotoristaRepository
         return await _context.Motoristas.FindAsync(id);
     }
 
+    public async Task<IEnumerable<Motorista>> ObterTodosAsync()
+    {
+        return await _context.Motoristas.AsNoTracking().ToListAsync();
+    }
+
     public async Task SalvarAlteracoesAsync()
     {
         await _context.SaveChangesAsync();

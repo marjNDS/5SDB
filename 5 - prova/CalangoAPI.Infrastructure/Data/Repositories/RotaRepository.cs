@@ -22,7 +22,7 @@ public class RotaRepository : IRotaRepository
     public async Task<Rota?> ObterPorIdAsync(Guid id)
     {
         return await _context.Rotas
-            .Include(r => r.Paradas) // Eager loading da raiz de agregação
+            .Include(r => r.Paradas)
             .FirstOrDefaultAsync(r => r.Id == id);
     }
 
